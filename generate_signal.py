@@ -94,19 +94,18 @@ output = {
     "aggiornato":   datetime.now(timezone.utc).strftime('%d/%m/%Y %H:%M UTC'),
     "data_analisi": df_feat.index[-1].strftime('%d/%m/%Y'),
     "ultimo_close": int(df.loc[df_feat.index[-1], 'Close']),
-    "probabilita":  round(proba * 100, 1),
-    "soglia":       round(THRESHOLD * 100, 1),
+    "probabilita":  float(round(proba * 100, 1)),
+    "soglia":       float(round(THRESHOLD * 100, 1)),
     "segnale":      segnale,
     "emoji":        emoji,
-    "storico":      storico,
+    "storico":      [{"data": s["data"], "close": int(s["close"])} for s in storico],
     "indicatori": {
-        "RSI_14": rsi,
-        "MACD":   macd,
-        "VIX":    vix_v,
-        "BB_pos": bb_pos
+        "RSI_14": float(rsi),
+        "MACD":   float(macd),
+        "VIX":    float(vix_v),
+        "BB_pos": float(bb_pos)
     }
 }
-
 with open('docs/docs/signal.json', 'w') as f:
     json.dump(output, f, indent=2)
 
