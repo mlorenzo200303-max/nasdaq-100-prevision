@@ -1,0 +1,34 @@
+name: Aggiorna Segnale Nasdaq 100
+
+on:
+  schedule:
+    - cron: '0 23 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  genera-segnale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa dipendenze
+        run: |
+          pip install yfinance xgboost scikit-learn pandas numpy --quiet
+
+      - name: Genera segnale
+        run: python generate_signal.py
+
+      - name: Commit e push signal.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/signal.json
+          git diff --staged --quiet || git commit -m "🤖 Segnale aggiornato $(date +'%d/%m/%Y')"
+          git push
