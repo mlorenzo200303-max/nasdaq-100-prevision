@@ -61,7 +61,7 @@
 async function loadSignal() {
   const app = document.getElementById('app');
   try {
-    const res  = await fetch('signal.json?t=' + Date.now());
+    const res  = await fetch('docs/signal.json?t=' + Date.now());
     const data = await res.json();
     render(data);
   } catch(e) {
