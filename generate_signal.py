@@ -106,6 +106,6 @@ output = {
         "BB_pos": float(bb_pos)
     }
 }
-with open('docs/docs/signal.json', 'w') as f:
+with open('docs/signal.json', 'w') as f:
     json.dump(output, f, indent=2)
 
