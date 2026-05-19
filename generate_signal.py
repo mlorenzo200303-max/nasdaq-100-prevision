@@ -94,7 +94,7 @@ output = {
     "aggiornato":   datetime.now(timezone.utc).strftime('%d/%m/%Y %H:%M UTC'),
     "data_analisi": df_feat.index[-1].strftime('%d/%m/%Y'),
     "ultimo_close": int(df.loc[df_feat.index[-1], 'Close']),
-    "probabilita":  float(round(proba * 100, 1)),
+    "probabilita":  round(float(proba) * 100, 1),
     "soglia":       float(round(THRESHOLD * 100, 1)),
     "segnale":      segnale,
   "emoji":        "&#x1F7E2;" if segnale == "LONG" else "&#x1F534;",
