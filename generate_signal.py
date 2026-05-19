@@ -78,7 +78,7 @@ proba = model.predict_proba(oggi)[0, 1]
 
 THRESHOLD = 0.54
 segnale   = "LONG" if proba >= THRESHOLD else "FLAT"
-emoji     = "🟢" if segnale == "LONG" else "🔴"
+emoji = "LONG" if segnale == "LONG" else "FLAT"
 
 ultimi = df.tail(7)[['Close']].copy()
 ultimi['data']  = ultimi.index.strftime('%d/%m')
@@ -97,7 +97,7 @@ output = {
     "probabilita":  float(round(proba * 100, 1)),
     "soglia":       float(round(THRESHOLD * 100, 1)),
     "segnale":      segnale,
-    "emoji":        emoji,
+  "emoji":        "&#x1F7E2;" if segnale == "LONG" else "&#x1F534;",
     "storico":      [{"data": s["data"], "close": int(s["close"])} for s in storico],
     "indicatori": {
         "RSI_14": float(rsi),
@@ -109,4 +109,3 @@ output = {
 with open('docs/docs/signal.json', 'w') as f:
     json.dump(output, f, indent=2)
 
-print(f"{emoji} Segnale: {segnale}  |  Probabilità: {proba*100:.1f}%")
