@@ -81,7 +81,7 @@ function render(d) {
       <div class="signal-label">${d.segnale}</div>
       <div class="signal-sub">Analisi del ${d.data_analisi} &nbsp;·&nbsp; Ultimo close: $${d.ultimo_close.toLocaleString('it-IT')}</div>
       <div class="prob-section">
-        <div class="prob-label"><span>Probabilità rialzo</span><span class="prob-value">${d.probabilita}%</span></div>
+        <div class="prob-label"><span>Probabilità rialzo</span><span class="prob-value">${parseFloat(d.probabilita).toFixed(1)}%</span></div>
         <div class="prob-bar"><div class="prob-fill" id="probFill" style="width:0%"></div></div>
         <div class="threshold-marker">
           <div class="threshold-line" style="left:${d.soglia}%"></div>
