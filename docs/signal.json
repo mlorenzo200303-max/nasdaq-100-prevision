@@ -1,0 +1,45 @@
+{
+  "aggiornato": "19/05/2026 10:25 UTC",
+  "data_analisi": "18/05/2026",
+  "ultimo_close": 28994,
+  "probabilita": 38.099998474121094,
+  "soglia": 54.0,
+  "segnale": "FLAT",
+  "emoji": "&#x1F534;",
+  "storico": [
+    {
+      "data": "08/05",
+      "close": 29235
+    },
+    {
+      "data": "11/05",
+      "close": 29321
+    },
+    {
+      "data": "12/05",
+      "close": 29065
+    },
+    {
+      "data": "13/05",
+      "close": 29367
+    },
+    {
+      "data": "14/05",
+      "close": 29580
+    },
+    {
+      "data": "15/05",
+      "close": 29125
+    },
+    {
+      "data": "18/05",
+      "close": 28994
+    }
+  ],
+  "indicatori": {
+    "RSI_14": 75.6,
+    "MACD": 955.8,
+    "VIX": 17.8,
+    "BB_pos": 72.4
+  }
+}
