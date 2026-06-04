@@ -1,8 +1,8 @@
 {
-  "aggiornato": "03/06/2026 16:05 UTC",
+  "aggiornato": "04/06/2026 10:51 UTC",
   "data_analisi": "03/06/2026",
-  "ultimo_close": 30549,
-  "probabilita": 44.0,
+  "ultimo_close": 30571,
+  "probabilita": 43.2,
   "soglia": 54.0,
   "segnale": "FLAT",
   "emoji": "&#x1F534;",
@@ -33,13 +33,13 @@
     },
     {
       "data": "03/06",
-      "close": 30550
+      "close": 30571
     }
   ],
   "indicatori": {
-    "RSI_14": 69.8,
-    "MACD": 889.3,
-    "VIX": 16.2,
-    "BB_pos": 88.3
+    "RSI_14": 70.3,
+    "MACD": 891.0,
+    "VIX": 16.1,
+    "BB_pos": 89.0
   }
 }
