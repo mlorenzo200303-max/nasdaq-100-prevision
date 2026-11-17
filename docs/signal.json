@@ -1,16 +1,12 @@
 {
-  "aggiornato": "14/11/2026 02:56 UTC",
-  "data_analisi": "13/11/2026",
-  "ultimo_close": 27943,
-  "probabilita": 81.0,
+  "aggiornato": "17/11/2026 04:58 UTC",
+  "data_analisi": "16/11/2026",
+  "ultimo_close": 27197,
+  "probabilita": 83.0,
   "soglia": 54.0,
   "segnale": "LONG",
   "emoji": "&#x1F7E2;",
   "storico": [
-    {
-      "data": "05/11",
-      "close": 26630
-    },
     {
       "data": "06/11",
       "close": 26990
@@ -34,12 +30,16 @@
     {
       "data": "13/11",
       "close": 27944
+    },
+    {
+      "data": "16/11",
+      "close": 27197
     }
   ],
   "indicatori": {
-    "RSI_14": 40.7,
-    "MACD": -530.6,
-    "VIX": 19.3,
-    "BB_pos": 32.4
+    "RSI_14": 33.6,
+    "MACD": -570.7,
+    "VIX": 22.9,
+    "BB_pos": 16.1
   }
 }
